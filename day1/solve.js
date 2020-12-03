@@ -1,26 +1,25 @@
-const assert = require('assert');
-const fs = require('fs');
+const assert = require("assert");
+const utils = require("../utils");
 
 const wantedNumber = 2020;
 
 function solver(input) {
-    for (let i = 0; i < input.length; i++) {
-        for (let j = 0; j < input.length; j++) {
-            if (i != j && input[i] + input[j] === wantedNumber) {      
-                return input[i] * input[j];
-            }
+  for (let i = 0; i < input.length; i++) {
+    for (let j = 0; j < input.length; j++) {
+      for (let k = 0; k < input.length; k++) {
+        if ((i != j) != k && input[i] + input[j] + input[k] === wantedNumber) {
+          return input[i] * input[j] * input[k];
         }
+      }
     }
+  }
 }
 
-assert(solver([1721,979,366,299,675,1456]) == 514579);
+assert(solver([1721, 979, 366, 299, 675, 1456]) == 241861950);
 
-fs.readFile('./day1/input.txt', 'utf8', (err, data) => {
-    if (err) {
-        console.error(err);
-        return
-    }
-    const input = data.split('\r\n').map(x => parseInt(x));
-    console.log(solver(input));
-})
+async function main() {
+  const input = await utils.readInput("day1/input.txt", utils.types.INT);
+  console.log(solver(input));
+}
 
+main();
