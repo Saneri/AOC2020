@@ -2,9 +2,10 @@
   "name": "aoc2020",
   "version": "1.0.0",
   "description": "Advent of Code 2020",
-  "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "1": "node day1/solve.js",
+    "2": "node day2/solve.js"
   },
   "repository": {
     "type": "git",
