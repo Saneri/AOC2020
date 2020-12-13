@@ -3,10 +3,11 @@
   "version": "1.0.0",
   "description": "Advent of Code 2020",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "1": "node day1/solve.js",
     "2": "node day2/solve.js",
-    "3": "node day3/solve.js"
+    "3": "node day3/solve.js",
+    "4": "node day4/solve.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
@@ -20,6 +21,7 @@
   "homepage": "https://github.com/Saneri/AOC2020#readme",
   "dependencies": {},
   "devDependencies": {
-    "assert": "^2.0.0"
+    "assert": "^2.0.0",
+    "lodash": "^4.17.20"
   }
 }
